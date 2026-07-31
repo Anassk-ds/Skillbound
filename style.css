@@ -1,1 +1,260 @@
+/* =========================================================
+   Skillbound Academy — design tokens & overrides on Bootstrap 5
+   ========================================================= */
 
+:root {
+  --nl-navy: #12213B;
+  --nl-navy-soft: #1B2F52;
+  --nl-parchment: #F6F3EC;
+  --nl-amber: #E8A33D;
+  --nl-amber-dark: #C9832A;
+  --nl-slate: #55677D;
+  --nl-ink: #1D2430;
+  --nl-line: rgba(29, 36, 48, 0.12);
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--nl-ink);
+  background-color: var(--nl-parchment);
+}
+
+h1, h2, h3, h4, .display-serif {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nl-amber-dark);
+  font-weight: 600;
+}
+
+a { color: var(--nl-navy); }
+a.link-amber { color: var(--nl-amber-dark); text-decoration: none; }
+a.link-amber:hover { color: var(--nl-navy); }
+
+/* ---------- Buttons ---------- */
+.btn-amber {
+  background-color: var(--nl-amber);
+  border-color: var(--nl-amber);
+  color: var(--nl-navy);
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 2px;
+}
+.btn-amber:hover {
+  background-color: var(--nl-amber-dark);
+  border-color: var(--nl-amber-dark);
+  color: #fff;
+}
+.btn-outline-navy {
+  border: 1.5px solid var(--nl-navy);
+  color: var(--nl-navy);
+  font-weight: 600;
+  padding: 0.6rem 1.45rem;
+  border-radius: 2px;
+  background: transparent;
+}
+.btn-outline-navy:hover {
+  background-color: var(--nl-navy);
+  color: #fff;
+}
+.btn-outline-light-amber {
+  border: 1.5px solid var(--nl-amber);
+  color: var(--nl-amber);
+  font-weight: 600;
+  border-radius: 2px;
+  background: transparent;
+}
+.btn-outline-light-amber:hover {
+  background-color: var(--nl-amber);
+  color: var(--nl-navy);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-skillbound {
+  background-color: var(--nl-parchment);
+  border-bottom: 1px solid var(--nl-line);
+}
+.navbar-brand-mark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--nl-navy);
+}
+.navbar-brand-mark span { color: var(--nl-amber-dark); }
+.navbar-skillbound .nav-link {
+  font-weight: 500;
+  color: var(--nl-ink);
+  margin: 0 0.5rem;
+}
+.navbar-skillbound .nav-link.active,
+.navbar-skillbound .nav-link:hover {
+  color: var(--nl-amber-dark);
+}
+
+/* ---------- Hero / learning path ---------- */
+.hero-section {
+  background-color: var(--nl-navy);
+  color: #EDEBE3;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section .eyebrow { color: var(--nl-amber); }
+.hero-headline {
+  font-size: clamp(2.3rem, 4vw, 3.3rem);
+  color: #fff;
+  line-height: 1.1;
+}
+.hero-sub {
+  color: #C7CBD6;
+  font-size: 1.05rem;
+  max-width: 34rem;
+}
+
+.path-node {
+  fill: var(--nl-navy);
+  stroke: var(--nl-amber);
+  stroke-width: 2;
+}
+.path-node.done { fill: var(--nl-amber); stroke: var(--nl-amber); }
+.path-line { stroke: rgba(232,163,61,0.45); stroke-width: 2; fill: none; stroke-dasharray: 5 6; }
+.path-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  fill: #C7CBD6;
+  letter-spacing: 0.04em;
+}
+.path-label.title { fill: #fff; font-family: var(--font-body); font-size: 13px; font-weight: 600; }
+
+/* ---------- Sections ---------- */
+.section-parchment { background-color: var(--nl-parchment); }
+.section-navy { background-color: var(--nl-navy); color: #EDEBE3; }
+.section-divider {
+  height: 1px;
+  background: var(--nl-line);
+  border: none;
+}
+
+.module-card {
+  background: #fff;
+  border: 1px solid var(--nl-line);
+  border-radius: 3px;
+  padding: 1.75rem;
+  height: 100%;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.module-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(18,33,59,0.08);
+}
+.module-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--nl-amber-dark);
+  letter-spacing: 0.08em;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--nl-amber);
+}
+
+.quote-card {
+  background: #fff;
+  border-left: 3px solid var(--nl-amber);
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 3px 3px 0;
+}
+
+footer.site-footer {
+  background-color: var(--nl-navy);
+  color: #B9BFCB;
+}
+footer.site-footer a { color: #EDEBE3; text-decoration: none; }
+footer.site-footer a:hover { color: var(--nl-amber); }
+footer.site-footer .eyebrow { color: var(--nl-amber); }
+
+/* ---------- About page timeline ---------- */
+.timeline-rail {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px dashed var(--nl-line);
+}
+.timeline-item { position: relative; padding-bottom: 2.25rem; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -2.42rem;
+  top: 0.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--nl-amber);
+  border: 2px solid var(--nl-navy);
+}
+
+.avatar-ring {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 2px solid var(--nl-amber);
+  padding: 3px;
+}
+.avatar-ring img { border-radius: 50%; width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Contact page ---------- */
+.contact-panel {
+  background: var(--nl-navy);
+  color: #EDEBE3;
+  border-radius: 3px;
+}
+.form-control-skillbound {
+  background: #fff;
+  border: 1px solid var(--nl-line);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+}
+.form-control-skillbound:focus {
+  border-color: var(--nl-amber);
+  box-shadow: 0 0 0 0.2rem rgba(232,163,61,0.25);
+}
+
+.accordion-skillbound .accordion-button {
+  font-weight: 600;
+  color: var(--nl-navy);
+  background: #fff;
+}
+.accordion-skillbound .accordion-button:not(.collapsed) {
+  color: var(--nl-amber-dark);
+  background: #fff;
+  box-shadow: none;
+}
+.accordion-skillbound .accordion-button:focus { box-shadow: none; border-color: var(--nl-line); }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible, button:focus-visible, .nav-link:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--nl-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .module-card { transition: none; }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section .hero-path { margin-top: 2rem; }
+}
