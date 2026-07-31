@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Skillbound Academy</title>
+<meta name="description" content="Start your Skillbound Academy application or ask a question about tracks, schedule, and cost.">
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav class="navbar navbar-expand-lg navbar-skillbound sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand navbar-brand-mark" href="index.html">Skill<span>bound</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nlNav" aria-controls="nlNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nlNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item mt-2 mt-lg-0 ms-lg-2">
+          <a href="contact.html" class="btn btn-amber btn-sm px-3">Apply now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Page header ===== -->
+<header class="hero-section py-5">
+  <div class="container py-4">
+    <div class="eyebrow mb-3">Get in touch</div>
+    <h1 class="hero-headline mb-3" style="font-size:clamp(2rem,3.4vw,2.8rem);">Tell us what you want to build.</h1>
+    <p class="hero-sub">Applications take about twenty minutes. If you're not sure which track fits, send a note below and a mentor will point you the right way.</p>
+  </div>
+</header>
+
+<!-- ===== Form + info ===== -->
+<section class="section-parchment py-5">
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Form -->
+      <div class="col-lg-7">
+        <div class="module-card">
+          <h3 class="h4 mb-4">Start your application</h3>
+          <form id="nlContactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label small fw-semibold">Full name</label>
+                <input type="text" class="form-control form-control-skillbound" id="fullName" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label small fw-semibold">Email</label>
+                <input type="email" class="form-control form-control-skillbound" id="email" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="track" class="form-label small fw-semibold">Track you're interested in</label>
+                <select class="form-select form-control-skillbound" id="track" required>
+                  <option value="" selected disabled>Choose a track</option>
+                  <option>Product Design</option>
+                  <option>Full-Stack Web</option>
+                  <option>Product Management</option>
+                  <option>Not sure yet</option>
+                </select>
+                <div class="invalid-feedback">Please choose a track.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="cohort" class="form-label small fw-semibold">Earliest cohort</label>
+                <select class="form-select form-control-skillbound" id="cohort" required>
+                  <option value="" selected disabled>Choose a start date</option>
+                  <option>October 2026</option>
+                  <option>January 2027</option>
+                  <option>April 2027</option>
+                </select>
+                <div class="invalid-feedback">Please choose a cohort.</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label small fw-semibold">What do you want to build?</label>
+                <textarea class="form-control form-control-skillbound" id="message" rows="4" required></textarea>
+                <div class="invalid-feedback">Tell us a little about what you want to build.</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-amber mt-4">Submit application</button>
+            <div id="nlFormSuccess" class="alert alert-success mt-3 d-none" role="alert">
+              Thanks — your application was received. A mentor will reply within two working days.
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Info panel -->
+      <div class="col-lg-5">
+        <div class="contact-panel p-4 p-lg-5 h-100">
+          <div class="eyebrow mb-3">Office</div>
+          <p class="mb-4">Guntur,Andhra Pradesh<br>Remote-first — cohorts run worldwide on UTC-friendly schedules.</p>
+
+          <div class="eyebrow mb-3">Reach a human</div>
+          <p class="mb-1"><i class="bi bi-envelope me-2"></i>anasshaik382@gmail.com</p>
+          <p class="mb-4"><i class="bi bi-telephone me-2"></i>+91 7842386284</p>
+
+          <div class="eyebrow mb-3">Response time</div>
+          <p class="mb-0">Applications are reviewed within two working days. Track questions are usually answered same-day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="py-5" style="background-color:#fff;">
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="eyebrow mb-2">Before you apply</div>
+        <h2 class="display-serif mb-4">A few things people usually ask.</h2>
+        <div class="accordion accordion-skillbound" id="nlFaq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Do I need prior experience to apply?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#nlFaq">
+              <div class="accordion-body text-secondary">No. Module 1 is built for people starting from zero in the craft. What matters more is that you can commit roughly 15 hours a week for eight weeks.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                What happens if I fall behind during Build?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#nlFaq">
+              <div class="accordion-body text-secondary">Your mentor flags it at the weekly check-in and helps you cut scope so you still have something real by the Module 3 critique — the deadline itself doesn't move.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Is the week 8 hiring panel a guaranteed job offer?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#nlFaq">
+              <div class="accordion-body text-secondary">No — it's a real critique from people currently hiring for the role, and it's often where referrals start. 86% of graduates are hired or promoted within six months of finishing.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Can I switch tracks after applying?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#nlFaq">
+              <div class="accordion-body text-secondary">Yes, up until the cohort starts. After Module 1 begins, tracks are locked for the rest of the cohort.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <div class="navbar-brand-mark mb-2" style="color:#fff;">Skill<span>bound</span></div>
+        <p class="small text-white-50">A cohort-based online school for people changing careers into design, code, and product.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="eyebrow mb-3">Site</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="index.html">Home</a></li>
+          <li class="mb-2"><a href="about.html">About</a></li>
+          <li class="mb-2"><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="eyebrow mb-3">Tracks</div>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="about.html">Product Design</a></li>
+          <li class="mb-2"><a href="about.html">Full-Stack Web</a></li>
+          <li class="mb-2"><a href="about.html">Product Management</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="eyebrow mb-3">Office</div>
+        <p class="small text-white-50 mb-1">Guntur,Andhra Pradesh<br>Remote-first, cohorts worldwide</p>
+        <p class="small text-white-50">anasshaik382@gmail.com</p>
+      </div>
+    </div>
+    <hr class="section-divider my-4" style="opacity:0.15;">
+    <p class="small text-white-50 mb-0">© 2026 Skillbound Academy. Built for an internship UI exploration task.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
