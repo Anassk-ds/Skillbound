@@ -42,7 +42,7 @@ js/script.js    → Client-side form validation + simulated submit (no backend o
 
 ## Time taken
 
-_Fill in with your actual time, e.g.: "Roughly 6 hours across two days — ~1.5h researching Bootstrap examples, ~3h building the three pages, ~1h on responsiveness/polish, ~0.5h on this report."_
+"Roughly 4 hours — ~1h researching Bootstrap examples, ~1.5h building the three pages, ~1h on responsiveness/polish, ~0.5h on this report."_
 
 ## Learnings
 
