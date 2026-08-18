@@ -1,4 +1,4 @@
-# Skillbound Academy — Bootstrap 5 UI Exploration
+## Skillbound Academy — Bootstrap 5 UI Exploration
 
 A 3-page responsive site built for the internship's Bootstrap 5 exploration task. The brief was to explore Bootstrap 5's example patterns and remix them into original pages rather than copy full templates, so I invented a fictional cohort-based online school ("Skillbound Academy") as the subject to design around, instead of using placeholder lorem-ipsum content.
 
