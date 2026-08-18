@@ -1,5 +1,4 @@
 // Skillbound Academy — small interactivity layer (no framework, plain JS)
-
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('nlContactForm');
   if (!form) return;
